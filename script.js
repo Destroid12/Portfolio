@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mediaHTML = `
                     <div class="video-container hover-target">
                         <video src="${project.url}" class="custom-video" preload="metadata"></video>
-                        <div class="video-overlay ${placeholderClass}"><span>Click Play to view</span></div>
+                        <div class="video-overlay ${placeholderClass}"><span>Loading...</span></div>
                         <div class="video-controls">
                             <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
                             <div class="progress-container">
