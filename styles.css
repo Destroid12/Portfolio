@@ -314,7 +314,6 @@ nav {
     object-fit: cover;
 }
 
-/* When fullscreen, show the entire video without cropping */
 .video-container:fullscreen .custom-video {
     object-fit: contain;
     background: #000;
