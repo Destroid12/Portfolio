@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const placeholderClass = category === 'scripting' ? 'placeholder-scripting' : 'placeholder-vfx';
                 mediaHTML = `
                     <div class="video-container hover-target">
-                        <video src="${project.url}" class="custom-video"></video>
+                        <video src="${project.url}" class="custom-video" preload="metadata"></video>
                         <div class="video-overlay ${placeholderClass}"><span>Click Play to view</span></div>
                         <div class="video-controls">
                             <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
@@ -195,6 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            video.addEventListener('dblclick', () => {
+                if (!document.fullscreenElement) {
+                    if (container.requestFullscreen) container.requestFullscreen();
+                    else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
+                } else {
+                    if (document.exitFullscreen) document.exitFullscreen();
+                    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                }
+            });
+
             fullscreenBtn.addEventListener('click', () => {
                 if (!document.fullscreenElement) {
                     if (container.requestFullscreen) {
@@ -223,6 +233,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            // Pause all videos on tab switch
+            document.querySelectorAll('video').forEach(vid => {
+                vid.pause();
+                const container = vid.closest('.video-container');
+                if (container) {
+                    const icon = container.querySelector('.play-pause-btn i');
+                    if (icon) {
+                        icon.classList.remove('fa-pause');
+                        icon.classList.add('fa-play');
+                    }
+                }
+            });
+
             tabBtns.forEach(b => b.classList.remove('active'));
             tabPanes.forEach(p => p.classList.remove('active'));
             btn.classList.add('active');
