@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destro [RAS] | Portfolio</title>
+    <meta name="description" content="Portfolio of Destro [RAS] - Roblox Scripter & VFX Artist">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Interactive Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Destro <span>[RAS]</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="hover-target">Home</a></li>
+                <li><a href="#about" class="hover-target">About</a></li>
+                <li><a href="#portfolio" class="hover-target">Portfolio</a></li>
+                <li><a href="#contact" class="hover-target">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1 class="glitch-title" data-text="Destro [RAS]">Destro <span class="gradient-text">[RAS]</span></h1>
+            <p class="subtitle">Roblox Scripter & VFX Artist. I write <span class="highlight">Lua</span> and make stuff that looks and plays great.</p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="btn primary-btn hover-target">View My Work</a>
+                <a href="#contact" class="btn secondary-btn hover-target">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container fade-in">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text glass-card tilt-card">
+                    <p>Hey, I've been messing around in Roblox Studio for a while now. Most of my time goes into writing Lua to make solid game mechanics, and creating VFX that actually looks good in-game.</p>
+                    <p>Right now I'm working solo, mostly focusing on combat systems and particle stuff. I just like pushing the engine and making fun things to play.</p>
+                </div>
+                <div class="skills glass-card tilt-card">
+                    <h3>Core Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="tag hover-target">Lua Scripting</span>
+                        <span class="tag hover-target">VFX</span>
+                        <span class="tag hover-target">Particle Emitters</span>
+                        <span class="tag hover-target">Game Mechanics</span>
+                        <span class="tag hover-target">UI/UX Logic</span>
+                        <span class="tag hover-target">Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container fade-in">
+            <h2 class="section-title">My <span class="gradient-text">Work</span></h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active hover-target" data-target="scripting">Scripting</button>
+                <button class="tab-btn hover-target" data-target="vfx">VFX</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Scripting Tab -->
+                <div id="scripting" class="tab-pane active">
+                    <div class="project-grid" id="grid-scripting">
+                        <!-- Projects will be auto-generated here by script.js -->
+                    </div>
+                </div>
+
+                <!-- VFX Tab -->
+                <div id="vfx" class="tab-pane">
+                    <div class="project-grid" id="grid-vfx">
+                        <!-- Projects will be auto-generated here by script.js -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container fade-in">
+            <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            <p class="contact-desc">Wanna work together or just say hi? Hit me up on Discord or check my Roblox.</p>
+            
+            <div class="social-links">
+                <a href="https://www.roblox.com/users/2702425145/profile" target="_blank" class="social-btn glass-card tilt-card roblox-btn hover-target">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span>Roblox: boomT6612</span>
+                </a>
+                
+                <button class="social-btn glass-card tilt-card discord-btn hover-target" onclick="copyDiscord()">
+                    <i class="fa-brands fa-discord"></i>
+                    <span id="discord-text">Discord: nayonbien</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Destro [RAS]. All rights reserved.</p>
+    </footer>
+
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
