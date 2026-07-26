@@ -1,1 +1,1 @@
-﻿const projectData = {"scripting":[],"vfx":[]};
+﻿const projectData = {"scripting":[{"url":"assets/scripting/Custom Movement System (A custom movement system made from scratch!).mp4","title":"Custom Movement System","description":"A custom movement system made from scratch!","type":"video"}],"vfx":[{"url":"assets/vfx/WindVFXAdded (A custom VFX and camera system for a main menu!).mp4","title":"WindVFXAdded","description":"A custom VFX and camera system for a main menu!","type":"video"}]};
