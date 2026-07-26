@@ -23,7 +23,7 @@
 
 html {
     scroll-behavior: smooth;
-    cursor: none; /* Hide default cursor */
+   /* cursor: none;  Hide default cursor */
 }
 
 body {
