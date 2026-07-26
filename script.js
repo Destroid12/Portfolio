@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Show empty states if no projects
         if (scriptingGrid && (!projectData.scripting || projectData.scripting.length === 0)) {
-            scriptingGrid.innerHTML = `<p style="color: var(--text-muted); grid-column: 1/-1;">No scripting projects found. Add files to assets/scripting/ and run the update script!</p>`;
+            scriptingGrid.innerHTML = `<p style="color: var(--text-muted); grid-column: 1/-1;">Projects coming soon...</p>`;
         }
         if (vfxGrid && (!projectData.vfx || projectData.vfx.length === 0)) {
-            vfxGrid.innerHTML = `<p style="color: var(--text-muted); grid-column: 1/-1;">No VFX projects found. Add files to assets/vfx/ and run the update script!</p>`;
+            vfxGrid.innerHTML = `<p style="color: var(--text-muted); grid-column: 1/-1;">Projects coming soon...</p>`;
         }
     };
 
